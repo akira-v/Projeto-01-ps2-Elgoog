@@ -1,11 +1,10 @@
 package br.mack.ps2;
 
-import java.math.BigDecimal;
 
 public class Conta {
     private int id;
     private String nome;
-    private BigDecimal saldo;
+    private int saldo;
     private int agencia;
 
 
@@ -25,11 +24,11 @@ public class Conta {
         this.nome = nome;
     }
 
-    public BigDecimal getSaldo() {
+    public int getSaldo() {
         return this.saldo;
     }
 
-    public void setSaldo(BigDecimal saldo) {
+    public void setSaldo(int saldo) {
         this.saldo = saldo;
     }
 
