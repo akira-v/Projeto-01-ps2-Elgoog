@@ -9,7 +9,7 @@ import br.mack.ps2.Conta;
 
 
 public class ContaDAOMySQL implements ContaDAO {
-    private String table = "conta";
+    private String table = "contas";
     private String createSQL = "INSERT INTO " + table + " VALUES (?, ?, ?, ?)";
     private String readSQL = "SELECT * FROM " + table;
     // private String updateSQL = "UPDATE " + table + " SET nome =?, saldo=?,
@@ -27,7 +27,7 @@ public class ContaDAOMySQL implements ContaDAO {
             stm.setInt(1, 0);  
             stm.setString(2, ""); 
             stm.setInt(3, 0); 
-            stm.setBigDecimal(4, x); //TODO mudar variaveis do create
+            stm.setInt(4, 0); //TODO mudar variaveis do create
 
 
             int reg = stm.executeUpdate();
