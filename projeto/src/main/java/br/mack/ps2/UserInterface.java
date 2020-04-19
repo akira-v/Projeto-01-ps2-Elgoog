@@ -3,14 +3,15 @@ package br.mack.ps2;
 import java.util.Scanner;
 
 import br.mack.ps2.persistencia.ContaDAO;
+import br.mack.ps2.persistencia.ContaDAOMySQL;
 
 public class UserInterface {
     ContaDAO dao;
-    Scanner i;
+    Scanner in;
 
     public UserInterface(ContaDAO dao) {
         this.dao = dao;
-        this.i = new Scanner(System.in);
+        this.in = new Scanner(System.in);
 
     }
 
@@ -32,8 +33,8 @@ public class UserInterface {
             System.out.println("|        4. Delete         |");
             System.out.println("|        5. Exit           |");
             System.out.println("============================");
-            op = i.nextInt();
-            i.nextLine();
+            op = in.nextInt();
+            in.nextLine();
 
             switch (op) {
                 case 1:
@@ -57,6 +58,17 @@ public class UserInterface {
     }
     
     private void create() {
+        Conta conta = new Conta();
+        System.out.println("informe o id da conta:");
+        conta.setId(in.nextInt());
+        System.out.println("Informe o nome do dono da conta:");
+        conta.setNome(in.next());
+        System.out.println("Informe a agencia da conta: ");
+        conta.setAgencia(in.nextInt());
+        System.out.println("Informe o saldo da conta: ");
+        conta.setSaldo(in.nextInt());
+
+        dao.create(conta);
 
     }
 
