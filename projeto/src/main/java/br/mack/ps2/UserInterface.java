@@ -3,6 +3,7 @@ package br.mack.ps2;
 import java.util.Scanner;
 
 import br.mack.ps2.persistencia.ContaDAOMySQL;
+import br.mack.ps2.interfaces.*;
 
 public class UserInterface {
     

@@ -1,9 +1,10 @@
-package br.mack.ps2;
+package br.mack.ps2.interfaces;
 
 import java.util.List;
 import java.util.Scanner;
 
 import br.mack.ps2.persistencia.ContaDAO;
+import br.mack.ps2.*;
 
 
 
