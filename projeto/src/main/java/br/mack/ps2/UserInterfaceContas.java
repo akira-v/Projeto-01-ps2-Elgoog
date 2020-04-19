@@ -7,11 +7,11 @@ import br.mack.ps2.persistencia.ContaDAO;
 
 
 
-public class UserInterface {
+public class UserInterfaceContas {
     ContaDAO dao;
     Scanner in;
 
-    public UserInterface(ContaDAO dao) {
+    public UserInterfaceContas(ContaDAO dao) {
         this.dao = dao;
         this.in = new Scanner(System.in);
 
