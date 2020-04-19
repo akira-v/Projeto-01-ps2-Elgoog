@@ -40,4 +40,14 @@ public class Conta {
         this.agencia = agencia;
     }
 
+
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", nome='" + getNome() + "'" +
+            ", saldo='" + getSaldo() + "'" +
+            ", agencia='" + getAgencia() + "'" +
+            "}";
+    }
+
 }
