@@ -40,18 +40,18 @@ public class UserInterface {
                     uic.Start();   
                     break;
                 case 2:
-                    
+                    System.out.println("Não Implementado!");
                     break;
                 case 3:
-                    
+                    System.out.println("Não Implementado!");
                     break;
-                case 5:
+                case 4:
                     System.out.println("end!");
                 default:
                 System.out.println("Opção Invalida!");
                     break;
             }
-        } while (op != 5);
+        } while (op != 4);
     }
 
 }
