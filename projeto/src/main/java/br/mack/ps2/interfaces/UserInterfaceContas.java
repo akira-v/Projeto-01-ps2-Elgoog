@@ -62,16 +62,21 @@ public class UserInterfaceContas {
     
     private void create() {
         Conta conta = new Conta();
-        System.out.println("informe o id da conta:");
+
+        System.out.println("informe o id da conta: ");
         conta.setId(in.nextInt());
-        System.out.println("Informe o nome do dono da conta:");
+        System.out.println("Informe o nome do dono da conta: ");
         conta.setNome(in.next());
         System.out.println("Informe a agencia da conta: ");
         conta.setAgencia(in.nextInt());
         System.out.println("Informe o saldo da conta: ");
         conta.setSaldo(in.nextInt());
 
-        dao.create(conta);
+        if (dao.create(conta))
+            System.out.println("Criado com sucesso");
+        else
+            System.out.println("Não foi possivel criar");
+        
 
     }
 
@@ -84,6 +89,22 @@ public class UserInterfaceContas {
     }
 
     private void update() {
+        Conta conta = new Conta();
+
+        System.out.println("informe o id da conta: ");
+        conta.setId(in.nextInt());
+        System.out.println("Informe o nome do dono da conta: ");
+        conta.setNome(in.next());
+        System.out.println("Informe a agencia da conta: ");
+        conta.setAgencia(in.nextInt());
+        System.out.println("Informe o saldo da conta: ");
+        conta.setSaldo(in.nextInt());
+
+        if (dao.update(conta))
+            System.out.println("Criado com sucesso");
+        else
+            System.out.println("Não foi possivel criar");
+
     }
 
     private void delete() {
