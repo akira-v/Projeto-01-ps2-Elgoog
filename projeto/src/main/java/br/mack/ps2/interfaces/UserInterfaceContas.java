@@ -108,6 +108,28 @@ public class UserInterfaceContas {
     }
 
     private void delete() {
-        
+        System.out.println("digite o id da conta que deseja apagar: ");
+        int id = in.nextInt();
+        List<Conta> contas = dao.read();
+        int i;
+        for (i = 0; i < contas.size(); i++) {
+            if (id == contas.get(i).getId()) {
+                System.out.println("Achamos essa conta: ");
+                System.out.println(contas.get(i));
+            } else
+                System.out.println("não encontramos nenhuma conta com o mesmo id! ");
+        }
+        System.out.println("DEseja realmente apaga-la? ");
+        System.out.println("1. sim");
+        System.out.println("2. não");
+        int op1 = in.nextInt();
+        if (op1 == 1) {
+            if (dao.delete(contas.get(i)))
+                System.out.println("Conta excluida com sucesso! ");
+            else
+                System.out.println("Não foi possivel excluir! ");
+        }
+        else
+            System.out.println("A conta não será apagada! ");
     }
 }
